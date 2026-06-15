@@ -1,0 +1,299 @@
+2026-03-25 15:45:57,023 | INFO | src.modules.users.service | User created with email: thaynararm2@hotmail.com and uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-04-15 15:56:54,499 | INFO | src.modules.users.service | User updated with email: thaynararm2@hotmail.com and uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-04-16 15:16:39,652 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: bd15d2fa-4cb9-45e6-a51c-2efc20e5f882 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-04-16 15:21:30,758 | INFO | src.modules.financial_accounts.service | Financial account updated with uuid: bd15d2fa-4cb9-45e6-a51c-2efc20e5f882
+2026-04-16 15:21:37,079 | INFO | src.modules.financial_accounts.service | Financial account updated with uuid: bd15d2fa-4cb9-45e6-a51c-2efc20e5f882
+2026-04-16 15:40:00,040 | INFO | src.modules.cards.service | Card created with uuid: 1bb4fb0b-dd63-4155-9109-0b9c27f5660c for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-04-16 15:44:52,979 | INFO | src.modules.cards.service | Card updated with uuid: 1bb4fb0b-dd63-4155-9109-0b9c27f5660c
+2026-04-16 15:45:03,038 | INFO | src.modules.cards.service | Card updated with uuid: 1bb4fb0b-dd63-4155-9109-0b9c27f5660c
+2026-04-16 15:47:33,418 | INFO | src.modules.cards.service | Card updated with uuid: 1bb4fb0b-dd63-4155-9109-0b9c27f5660c
+2026-04-16 15:47:50,014 | INFO | src.modules.cards.service | Card updated with uuid: 1bb4fb0b-dd63-4155-9109-0b9c27f5660c
+2026-04-16 15:48:00,976 | INFO | src.modules.cards.service | Card updated with uuid: 1bb4fb0b-dd63-4155-9109-0b9c27f5660c
+2026-05-11 16:30:20,974 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 0777ea23-b15f-462b-b82a-aaa337e303a2 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-11 21:48:56,742 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: b4c89162-64f2-48b0-be2e-6ab502ce85ea for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-11 21:49:07,967 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: b091c337-a4b7-4cc9-9ff4-29bb401bb7a0 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-11 21:49:19,942 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: e98afe0e-d7f1-4147-910b-204fa3e37907 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-11 21:49:27,629 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: faadab44-6403-454b-ba7c-2e9040a8fed1 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-11 21:49:34,644 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: d9858a38-d63c-4493-93a9-a08f823b0421 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-11 22:08:02,295 | INFO | src.modules.financial_accounts.service | Financial account updated with uuid: bd15d2fa-4cb9-45e6-a51c-2efc20e5f882
+2026-05-12 11:22:36,701 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 9ae4f67b-2ddc-4132-81d7-cb0190ffdabc
+2026-05-13 10:58:48,914 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 442b32a5-4fb5-407f-8092-f81b50e62914 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-13 11:00:41,935 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: a1a13870-9d78-4859-a008-96fdcf8c9dcc for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-13 11:22:11,079 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: b7414b98-4226-4800-b979-1ba700988d7b for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-13 11:30:16,253 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: a6c5850c-1090-4329-97ad-1f6aaa7ef127 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-26 15:08:31,647 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 09826797-972a-43c4-81a5-762b4b74d042
+2026-05-26 15:08:47,044 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: febe98da-25b0-422d-8ec9-02771cacbd98
+2026-05-26 15:09:05,411 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: ac468f82-aea9-4840-aec4-b39a0141cc33
+2026-05-26 15:10:11,965 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: c2a2cbdb-7ebc-4d7b-b171-5bf34eac1430
+2026-05-26 15:10:15,536 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: f17aa18d-ad62-4cec-9a17-faf1339a6f84
+2026-05-26 15:14:28,935 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: e1380c9c-43ea-4067-a2c1-09720b62a846
+2026-05-26 15:25:58,357 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 8ed92b56-8a18-4f18-91ce-93ac5eaf485b
+2026-05-26 15:35:15,141 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 8ed92b56-8a18-4f18-91ce-93ac5eaf485b
+2026-05-26 15:35:21,218 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 8ed92b56-8a18-4f18-91ce-93ac5eaf485b
+2026-05-26 15:37:20,691 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 8ed92b56-8a18-4f18-91ce-93ac5eaf485b
+2026-05-26 15:41:50,417 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 8ed92b56-8a18-4f18-91ce-93ac5eaf485b
+2026-05-26 15:42:02,157 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 8ed92b56-8a18-4f18-91ce-93ac5eaf485b
+2026-05-26 15:42:21,794 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 8ed92b56-8a18-4f18-91ce-93ac5eaf485b
+2026-05-26 15:42:37,165 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 8ed92b56-8a18-4f18-91ce-93ac5eaf485b
+2026-05-26 15:42:45,983 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 8ed92b56-8a18-4f18-91ce-93ac5eaf485b
+2026-05-26 15:42:50,879 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 8ed92b56-8a18-4f18-91ce-93ac5eaf485b
+2026-05-26 15:43:18,473 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 48ef9f1b-d73c-48f3-9b10-2468fd273ae8
+2026-05-26 15:46:27,604 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 48ef9f1b-d73c-48f3-9b10-2468fd273ae8
+2026-05-26 15:46:32,657 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 48ef9f1b-d73c-48f3-9b10-2468fd273ae8
+2026-05-26 15:46:44,913 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 9ae4f67b-2ddc-4132-81d7-cb0190ffdabc
+2026-05-26 15:47:09,725 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 48ef9f1b-d73c-48f3-9b10-2468fd273ae8
+2026-05-26 15:47:55,507 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 48ef9f1b-d73c-48f3-9b10-2468fd273ae8
+2026-05-26 15:47:58,835 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 48ef9f1b-d73c-48f3-9b10-2468fd273ae8
+2026-05-26 15:48:10,355 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 48ef9f1b-d73c-48f3-9b10-2468fd273ae8
+2026-05-26 15:51:33,380 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 48ef9f1b-d73c-48f3-9b10-2468fd273ae8
+2026-05-26 15:51:39,286 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 48ef9f1b-d73c-48f3-9b10-2468fd273ae8
+2026-05-26 15:51:46,408 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 48ef9f1b-d73c-48f3-9b10-2468fd273ae8
+2026-05-26 15:51:48,882 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 48ef9f1b-d73c-48f3-9b10-2468fd273ae8
+2026-05-26 15:54:03,151 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 8ed92b56-8a18-4f18-91ce-93ac5eaf485b
+2026-05-26 15:54:15,602 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 8ed92b56-8a18-4f18-91ce-93ac5eaf485b
+2026-05-26 15:54:16,192 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 9ae4f67b-2ddc-4132-81d7-cb0190ffdabc
+2026-05-26 16:36:08,418 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 9b0c96e7-cd3e-4af6-9b8f-8413cba986f4
+2026-05-26 16:38:29,971 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 2684e0a2-505e-4ddc-87c1-ea792c568d05
+2026-05-26 21:26:53,026 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 2684e0a2-505e-4ddc-87c1-ea792c568d05
+2026-05-26 21:26:56,882 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 2684e0a2-505e-4ddc-87c1-ea792c568d05
+2026-05-26 21:27:00,583 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 2684e0a2-505e-4ddc-87c1-ea792c568d05
+2026-05-26 21:27:03,925 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 2684e0a2-505e-4ddc-87c1-ea792c568d05
+2026-05-26 21:27:12,111 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 2684e0a2-505e-4ddc-87c1-ea792c568d05
+2026-05-26 21:27:19,713 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 2684e0a2-505e-4ddc-87c1-ea792c568d05
+2026-05-26 21:27:27,407 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 2684e0a2-505e-4ddc-87c1-ea792c568d05
+2026-05-26 21:27:32,134 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 2684e0a2-505e-4ddc-87c1-ea792c568d05
+2026-05-26 21:27:40,098 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 2684e0a2-505e-4ddc-87c1-ea792c568d05
+2026-05-26 22:41:31,426 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 2684e0a2-505e-4ddc-87c1-ea792c568d05
+2026-05-26 22:45:34,627 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 22:45:45,595 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 22:45:57,018 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 22:46:27,030 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 22:48:36,162 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 22:48:43,935 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:04:28,543 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:04:37,821 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:11:16,525 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:13:07,710 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:13:27,148 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:13:35,392 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:13:55,235 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 1d1a33dc-d75d-479b-b58c-a7dbd7a7c281
+2026-05-26 23:13:59,794 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:14:35,231 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:14:50,686 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:15:02,523 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:19:11,493 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:19:15,806 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:19:21,668 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 658e2b16-dcdd-4da6-b46c-62d3873f326d
+2026-05-26 23:19:26,689 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 658e2b16-dcdd-4da6-b46c-62d3873f326d
+2026-05-26 23:19:32,179 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: a90af815-ce9e-4c3a-b748-1ff2b8c29300
+2026-05-26 23:19:38,473 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 658e2b16-dcdd-4da6-b46c-62d3873f326d
+2026-05-26 23:19:42,408 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:20:14,671 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:21:13,934 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:24:42,247 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:24:44,964 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 3897856c-d720-4069-b6cf-fb9cc657d652
+2026-05-26 23:24:50,523 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: def5c3e0-e009-4d27-91b2-2657649ca44d
+2026-05-26 23:24:53,935 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:24:56,865 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: def5c3e0-e009-4d27-91b2-2657649ca44d
+2026-05-26 23:24:57,484 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 3897856c-d720-4069-b6cf-fb9cc657d652
+2026-05-26 23:25:07,538 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:25:09,326 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 351eb82f-7287-41d3-add8-84c38501b5f3
+2026-05-26 23:25:13,323 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 016d2a97-2647-44a8-b2b5-7ee98f2ff386
+2026-05-26 23:25:19,388 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 016d2a97-2647-44a8-b2b5-7ee98f2ff386
+2026-05-27 10:16:35,099 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 016d2a97-2647-44a8-b2b5-7ee98f2ff386
+2026-05-27 10:19:32,501 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 3841de18-ba10-4abd-a06e-2a1384adbb92
+2026-05-27 10:19:42,283 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 100b1efb-11b3-459a-ba8d-7837b9e1c774
+2026-05-27 10:19:44,765 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 100b1efb-11b3-459a-ba8d-7837b9e1c774
+2026-05-27 10:19:45,992 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 3841de18-ba10-4abd-a06e-2a1384adbb92
+2026-05-27 10:52:04,105 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 314fbd78-9528-401d-8ccf-e7aee19f5a6f
+2026-05-27 10:54:18,140 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 314fbd78-9528-401d-8ccf-e7aee19f5a6f
+2026-05-27 10:54:26,408 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 314fbd78-9528-401d-8ccf-e7aee19f5a6f
+2026-05-27 10:54:58,421 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 314fbd78-9528-401d-8ccf-e7aee19f5a6f
+2026-05-27 10:56:07,063 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 314fbd78-9528-401d-8ccf-e7aee19f5a6f
+2026-05-27 10:58:07,509 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 314fbd78-9528-401d-8ccf-e7aee19f5a6f
+2026-05-27 11:00:04,428 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 016d2a97-2647-44a8-b2b5-7ee98f2ff386
+2026-05-27 11:00:08,543 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 016d2a97-2647-44a8-b2b5-7ee98f2ff386
+2026-05-27 11:00:43,663 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 016d2a97-2647-44a8-b2b5-7ee98f2ff386
+2026-05-27 11:05:29,148 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 016d2a97-2647-44a8-b2b5-7ee98f2ff386
+2026-05-27 11:13:06,060 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: fe42b7d2-7b56-420f-8740-f437965e8318
+2026-05-27 11:13:34,913 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: fe42b7d2-7b56-420f-8740-f437965e8318
+2026-05-27 11:30:58,810 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: fe42b7d2-7b56-420f-8740-f437965e8318
+2026-05-27 11:31:06,553 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 098702c9-4256-4972-a8e4-4ae25e18b742
+2026-05-27 11:31:11,025 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: fe42b7d2-7b56-420f-8740-f437965e8318
+2026-05-27 11:31:20,129 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 8f7df6a4-f991-4a11-b20d-d3f403a2fcbb
+2026-05-27 11:31:25,532 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 8f7df6a4-f991-4a11-b20d-d3f403a2fcbb
+2026-05-27 12:03:28,887 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 8f7df6a4-f991-4a11-b20d-d3f403a2fcbb
+2026-05-27 12:03:31,383 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: fe42b7d2-7b56-420f-8740-f437965e8318
+2026-05-27 12:08:56,991 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 62d24545-cc8d-4044-8012-74cdf69a3700
+2026-05-27 12:09:16,532 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 62d24545-cc8d-4044-8012-74cdf69a3700
+2026-05-27 12:09:19,176 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 62d24545-cc8d-4044-8012-74cdf69a3700
+2026-05-27 12:48:03,496 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 4b8b627e-9455-4562-97d4-a7fb294528c7
+2026-05-27 17:30:46,454 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 4b8b627e-9455-4562-97d4-a7fb294528c7
+2026-05-27 21:25:35,677 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: ea568ed9-91e7-492d-bd41-322c8e102ca5
+2026-05-27 21:25:41,147 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: a88044fa-ac7f-4b02-bf79-5258cf9a4243
+2026-05-27 21:25:45,250 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: a88044fa-ac7f-4b02-bf79-5258cf9a4243
+2026-05-27 21:25:52,121 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 4b8b627e-9455-4562-97d4-a7fb294528c7
+2026-05-27 21:26:04,561 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 507bbca7-f79c-4c3c-831e-29151cf4d76a
+2026-05-27 21:26:11,086 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 4b8b627e-9455-4562-97d4-a7fb294528c7
+2026-05-27 22:04:18,174 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 016d2a97-2647-44a8-b2b5-7ee98f2ff386
+2026-05-28 00:19:04,523 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 4b8b627e-9455-4562-97d4-a7fb294528c7
+2026-05-28 00:19:05,205 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: cc20f728-134b-4c3b-b730-b22eed419495
+2026-05-28 00:33:34,234 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 3371e80d-b6e8-4abb-874c-38984b75996e
+2026-05-28 00:36:37,114 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 016d2a97-2647-44a8-b2b5-7ee98f2ff386
+2026-05-28 00:44:33,473 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 016d2a97-2647-44a8-b2b5-7ee98f2ff386
+2026-05-28 12:09:18,681 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 4b384a0d-7574-40b8-9217-3e0462b3c9ed
+2026-05-29 19:27:07,361 | INFO | src.modules.cards.service | Card created with uuid: e301d9c2-1714-46a6-addc-f0d4cc718e47 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-29 20:35:15,173 | INFO | src.modules.cards.service | Card created with uuid: 5bd38ba3-7ff0-4d7d-bbce-5ed26a4c6337 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-29 20:39:35,456 | INFO | src.modules.cards.service | Card created with uuid: de642fe4-9e0c-4db6-add5-2d23103ed582 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-29 20:40:27,287 | INFO | src.modules.cards.service | Card created with uuid: c1e6eb19-463d-4043-a60d-a5c2cf2f830a for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-29 20:41:52,819 | INFO | src.modules.cards.service | Card created with uuid: 4ff3b3e7-f5f1-473a-a7ef-c177e7e51575 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-29 20:43:44,803 | INFO | src.modules.cards.service | Card created with uuid: 176d2bc9-1757-4430-b24d-39a0e183f1eb for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-29 20:45:46,174 | INFO | src.modules.cards.service | Card created with uuid: a561d563-54e3-4d87-a754-cd0e288f3644 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-29 20:51:08,478 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 0f354a15-624e-41cf-8006-df52c55262d7 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-29 20:53:36,469 | INFO | src.modules.cards.service | Card created with uuid: 31adb97e-035c-42f3-bcb8-7e63da588d4f for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-05-29 21:02:37,962 | INFO | src.modules.cards.service | Card created with uuid: 230c9a91-a28e-4ea2-b2d4-23530b252b11 for user uuid: 2301daa1-25c6-4b38-bf6f-60db08406d8f
+2026-06-01 15:14:19,182 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 016d2a97-2647-44a8-b2b5-7ee98f2ff386
+2026-06-01 15:14:22,731 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 016d2a97-2647-44a8-b2b5-7ee98f2ff386
+2026-06-01 15:14:43,877 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: fb375e23-cb5f-4aeb-ac6f-af73a0827802
+2026-06-01 15:14:47,799 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: fb375e23-cb5f-4aeb-ac6f-af73a0827802
+2026-06-01 15:16:00,278 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 016d2a97-2647-44a8-b2b5-7ee98f2ff386
+2026-06-02 21:50:03,745 | INFO | src.modules.cards.service | Card transaction updated with uuid: 0c9b498e-2324-41a4-94a1-b1806e9006ef
+2026-06-02 21:50:16,152 | INFO | src.modules.cards.service | Card transaction updated with uuid: 0c9b498e-2324-41a4-94a1-b1806e9006ef
+2026-06-02 21:54:36,836 | INFO | src.modules.cards.service | Card transaction updated with uuid: 0c9b498e-2324-41a4-94a1-b1806e9006ef
+2026-06-02 21:58:17,396 | INFO | src.modules.cards.service | Card transaction updated with uuid: 0c9b498e-2324-41a4-94a1-b1806e9006ef
+2026-06-02 21:59:51,773 | INFO | src.modules.cards.service | Card transaction updated with uuid: f0b04aec-cfe4-43ba-be5f-a30221b8a11a
+2026-06-02 21:59:57,009 | INFO | src.modules.cards.service | Card transaction updated with uuid: 88231f6b-89a8-45e8-b69e-ed7c3b9124e0
+2026-06-02 22:00:12,792 | INFO | src.modules.cards.service | Card transaction updated with uuid: f72986ad-cb93-439e-b56a-e75ddb0d156f
+2026-06-02 22:03:18,120 | INFO | src.modules.cards.service | Card transaction updated with uuid: 8791771a-9250-487a-87b1-5d82ad18aea6
+2026-06-02 22:03:42,005 | INFO | src.modules.cards.service | Card transaction updated with uuid: 8791771a-9250-487a-87b1-5d82ad18aea6
+2026-06-03 11:01:58,321 | INFO | src.modules.cards.service | Card transaction updated with uuid: 8791771a-9250-487a-87b1-5d82ad18aea6
+2026-06-03 11:09:20,064 | INFO | src.modules.cards.service | Card transaction updated with uuid: 8791771a-9250-487a-87b1-5d82ad18aea6
+2026-06-03 12:06:41,971 | INFO | src.modules.cards.service | Card transaction updated with uuid: 8791771a-9250-487a-87b1-5d82ad18aea6
+2026-06-03 12:22:17,839 | INFO | src.modules.cards.service | Card transaction updated with uuid: 8791771a-9250-487a-87b1-5d82ad18aea6
+2026-06-03 12:32:42,716 | INFO | src.modules.cards.service | Deleting card transaction with uuid: 8791771a-9250-487a-87b1-5d82ad18aea6
+2026-06-09 15:51:49,812 | INFO | src.modules.cards.service | Card transaction updated with uuid: decba84e-9340-4e29-8e16-30c47d474005
+2026-06-09 15:52:04,760 | INFO | src.modules.cards.service | Card transaction updated with uuid: decba84e-9340-4e29-8e16-30c47d474005
+2026-06-09 15:55:21,611 | INFO | src.modules.cards.service | Card transaction updated with uuid: decba84e-9340-4e29-8e16-30c47d474005
+2026-06-09 15:59:02,606 | INFO | src.modules.cards.service | Card transaction updated with uuid: decba84e-9340-4e29-8e16-30c47d474005
+2026-06-09 16:09:32,829 | INFO | src.modules.cards.service | Card transaction updated with uuid: 6dc399da-8595-4132-a3bd-ef007620c9cf
+2026-06-09 16:11:23,139 | INFO | src.modules.cards.service | Deleting card transaction with uuid: abf9bed7-cc64-412c-aaf0-e1aba5435194
+2026-06-09 16:13:31,282 | INFO | src.modules.cards.service | Card transaction updated with uuid: 82df8ba9-8a7b-41ab-ac5a-3d6dab428455
+2026-06-09 20:06:22,589 | INFO | src.modules.cards.service | Deleting card transaction with uuid: 23e6323d-7af2-4e7c-85a9-30500b6624ce
+2026-06-09 20:06:34,971 | INFO | src.modules.cards.service | Card transaction updated with uuid: f0b04aec-cfe4-43ba-be5f-a30221b8a11a
+2026-06-09 20:10:29,206 | INFO | src.modules.cards.service | Card transaction updated with uuid: f0b04aec-cfe4-43ba-be5f-a30221b8a11a
+2026-06-09 20:16:45,644 | INFO | src.modules.cards.service | Card transaction updated with uuid: 88231f6b-89a8-45e8-b69e-ed7c3b9124e0
+2026-06-10 10:32:26,319 | INFO | src.modules.cards.service | Card transaction updated with uuid: 88231f6b-89a8-45e8-b69e-ed7c3b9124e0
+2026-06-10 11:11:57,792 | INFO | src.modules.cards.service | Card transaction updated with uuid: e29fdbf6-bf40-470f-82de-3f78e4121751
+2026-06-10 11:12:37,223 | INFO | src.modules.cards.service | Card transaction updated with uuid: 1e92745f-66d5-422a-914c-03136f0ec6e5
+2026-06-10 11:20:00,266 | INFO | src.modules.cards.service | Card transaction updated with uuid: 347cea1c-5d5d-4d27-a805-24092dca69b4
+2026-06-10 11:23:40,416 | INFO | src.modules.cards.service | Card transaction updated with uuid: d93bc021-bd52-417e-b4dc-3b7f3bc07704
+2026-06-10 11:34:03,527 | INFO | src.modules.cards.service | Card transaction updated with uuid: c74c1211-d74d-4a14-b0e0-a802e9bd50a3
+2026-06-10 11:34:23,401 | INFO | src.modules.cards.service | Card transaction updated with uuid: c74c1211-d74d-4a14-b0e0-a802e9bd50a3
+2026-06-10 11:34:33,228 | INFO | src.modules.cards.service | Card transaction updated with uuid: c74c1211-d74d-4a14-b0e0-a802e9bd50a3
+2026-06-10 15:40:32,207 | INFO | src.modules.cards.service | Card transaction updated with uuid: c74c1211-d74d-4a14-b0e0-a802e9bd50a3
+2026-06-10 15:45:13,293 | INFO | src.modules.cards.service | Deleting card transaction with uuid: 266eb649-7c1f-4157-acdc-990c8476a73d
+2026-06-10 15:52:10,344 | INFO | src.modules.cards.service | Card transaction updated with uuid: 0c9b498e-2324-41a4-94a1-b1806e9006ef
+2026-06-10 15:52:29,668 | INFO | src.modules.cards.service | Deleting card transaction with uuid: 0c9b498e-2324-41a4-94a1-b1806e9006ef
+2026-06-10 15:53:17,836 | INFO | src.modules.cards.service | Card transaction updated with uuid: 88231f6b-89a8-45e8-b69e-ed7c3b9124e0
+2026-06-10 15:53:22,907 | INFO | src.modules.cards.service | Card transaction updated with uuid: f0b04aec-cfe4-43ba-be5f-a30221b8a11a
+2026-06-10 15:55:20,269 | INFO | src.modules.cards.service | Card transaction updated with uuid: 9b3b1475-bdc7-45c3-a636-70a4bf342ee6
+2026-06-10 15:55:40,164 | INFO | src.modules.cards.service | Card transaction updated with uuid: 9b3b1475-bdc7-45c3-a636-70a4bf342ee6
+2026-06-10 16:01:42,818 | INFO | src.modules.cards.service | Card transaction updated with uuid: c4855185-a463-45c1-a7f9-10944cf51089
+2026-06-10 16:02:46,313 | INFO | src.modules.cards.service | Card transaction updated with uuid: e6ac28b6-252f-4693-a51c-dbd4b24b1b28
+2026-06-10 16:03:05,077 | INFO | src.modules.cards.service | Card transaction updated with uuid: e6ac28b6-252f-4693-a51c-dbd4b24b1b28
+2026-06-10 16:15:46,062 | INFO | src.modules.cards.service | Card transaction updated with uuid: a0aa4c59-c928-4161-a0d3-bc07d6eea4ed
+2026-06-10 21:25:15,279 | INFO | src.modules.cards.service | Card transaction updated with uuid: c84443a5-fb1d-4c87-879f-b20b9e2a7b27
+2026-06-10 21:26:01,136 | INFO | src.modules.cards.service | Card transaction updated with uuid: c84443a5-fb1d-4c87-879f-b20b9e2a7b27
+2026-06-10 21:30:03,617 | INFO | src.modules.cards.service | Card transaction updated with uuid: 0ad855bb-fee0-4bd2-9702-e09783880ac6
+2026-06-10 21:30:54,003 | INFO | src.modules.cards.service | Deleting card transaction with uuid: 51473757-02c8-47ac-9280-7f6ea7d148cc
+2026-06-10 21:56:50,441 | INFO | src.modules.cards.service | Deleting card transaction with uuid: 96fd2665-87f5-4b03-bdd0-a8db7e0a3051
+2026-06-10 22:03:24,983 | INFO | src.modules.cards.service | Deleting card transaction with uuid: 379b5cbc-8aa3-48bc-96ed-25a05ad33c5d
+2026-06-10 22:04:20,752 | INFO | src.modules.cards.service | Deleting card transaction with uuid: a0849177-507a-4e15-9db3-d05ee58c18c7
+2026-06-10 22:05:57,019 | INFO | src.modules.cards.service | Card transaction updated with uuid: a0fd0e86-b04b-4091-8c99-1cb546667804
+2026-06-10 22:44:13,933 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 346630a8-fa5a-4555-bf09-db079b86c979
+2026-06-10 22:44:20,904 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 069e76c6-9739-43d3-9b02-345b732202b5
+2026-06-10 22:44:23,774 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 346630a8-fa5a-4555-bf09-db079b86c979
+2026-06-10 22:44:48,101 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 05a81fec-067f-4437-b589-6e1f81b07696
+2026-06-10 22:44:51,878 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 05a81fec-067f-4437-b589-6e1f81b07696
+2026-06-10 22:45:14,854 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 05a81fec-067f-4437-b589-6e1f81b07696
+2026-06-10 22:45:18,399 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: fb375e23-cb5f-4aeb-ac6f-af73a0827802
+2026-06-10 22:45:23,719 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 346630a8-fa5a-4555-bf09-db079b86c979
+2026-06-11 10:08:52,743 | INFO | src.modules.cards.service | Deleting card transaction with uuid: b626e785-8879-4043-886a-b99f7b48622c
+2026-06-11 10:08:54,631 | INFO | src.modules.cards.service | Deleting card transaction with uuid: 1b386273-7143-4969-abb1-e6f5086ed963
+2026-06-11 10:23:04,289 | INFO | src.modules.cards.service | Deleting card transaction with uuid: 6cf8815b-9f31-4038-a8cb-a0aee4d78268
+2026-06-11 10:23:05,921 | INFO | src.modules.cards.service | Deleting card transaction with uuid: fdfcbf2b-48c5-4e59-b773-e225f6ee0730
+2026-06-11 10:49:05,077 | INFO | src.modules.cards.service | Deleting card transaction with uuid: 77190090-3768-4628-b991-6e230c9507e1
+2026-06-11 10:49:06,802 | INFO | src.modules.cards.service | Deleting card transaction with uuid: fd91af3d-af80-4a24-aa5c-9bfdd138d509
+2026-06-11 10:54:12,633 | INFO | src.modules.cards.service | Deleting card transaction with uuid: 7401f0f4-ff8b-494e-b8b6-9ccc5973c21e
+2026-06-11 10:54:14,006 | INFO | src.modules.cards.service | Deleting card transaction with uuid: c054856d-7ab5-4fbb-a719-25b6ed548568
+2026-06-11 14:28:41,869 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 86b2b65b-0e34-4b4f-8ae2-d01dc8db9369
+2026-06-11 14:28:43,156 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 208566ed-7e7f-41d9-a8dc-b0b6c72cf59c
+2026-06-11 14:28:46,526 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 55f0d9dc-82f3-4a38-9a2b-fc35d2e9401c
+2026-06-11 14:28:47,915 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: d2af6ca0-d106-45e3-8987-cbad4ecb1c94
+2026-06-11 14:28:49,768 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: ff02b36c-bfaf-4490-86a6-0be2bb95d06e
+2026-06-11 14:33:47,592 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 1378 for invoice 12
+2026-06-11 14:33:52,916 | INFO | src.modules.cards.service | Deleting card transaction with uuid: 131e1d83-b1a0-4f8e-abb9-21f7cac6c67a
+2026-06-11 14:38:25,118 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 1379 for invoice 4
+2026-06-11 14:38:25,130 | INFO | src.modules.cards.service | Card transaction updated with uuid: ead7221a-ec56-4ba9-a280-f4c76159212d
+2026-06-11 14:38:50,629 | INFO | src.modules.cards.service | Card transaction updated with uuid: f8565967-5efe-489e-bd87-719b10cb74f7
+2026-06-11 14:41:36,652 | INFO | src.modules.cards.service | Card transaction updated with uuid: f8565967-5efe-489e-bd87-719b10cb74f7
+2026-06-11 14:43:18,250 | INFO | src.modules.cards.service | Card transaction updated with uuid: decba84e-9340-4e29-8e16-30c47d474005
+2026-06-11 14:43:32,633 | INFO | src.modules.cards.service | Card transaction updated with uuid: decba84e-9340-4e29-8e16-30c47d474005
+2026-06-11 14:44:09,870 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 1380 for invoice 51
+2026-06-11 14:44:11,917 | INFO | src.modules.cards.service | Deleting card transaction with uuid: b4045cf8-995e-457f-aed3-57f360f56164
+2026-06-11 14:46:29,516 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 1381 for invoice 5
+2026-06-11 14:46:29,530 | INFO | src.modules.cards.service | Card transaction updated with uuid: 67169873-885b-4266-a2ee-011351d2f652
+2026-06-11 14:47:08,122 | INFO | src.modules.cards.service | Card transaction updated with uuid: ead7221a-ec56-4ba9-a280-f4c76159212d
+2026-06-11 14:47:38,075 | INFO | src.modules.cards.service | Card transaction updated with uuid: ead7221a-ec56-4ba9-a280-f4c76159212d
+2026-06-11 14:50:13,204 | INFO | src.modules.cards.service | Card transaction updated with uuid: ead7221a-ec56-4ba9-a280-f4c76159212d
+2026-06-11 14:50:49,119 | INFO | src.modules.cards.service | Card transaction updated with uuid: 340f5dd2-5fd2-4e81-9862-977828a92613
+2026-06-11 14:54:36,516 | INFO | src.modules.cards.service | Card transaction updated with uuid: 340f5dd2-5fd2-4e81-9862-977828a92613
+2026-06-11 15:00:38,211 | INFO | src.modules.cards.service | Card transaction updated with uuid: 340f5dd2-5fd2-4e81-9862-977828a92613
+2026-06-11 15:10:42,771 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 1382 for invoice 7
+2026-06-11 15:12:11,233 | INFO | src.modules.cards.service | Deleting card transaction with uuid: 9c527378-2171-429a-8def-51c72dfe5514
+2026-06-11 15:40:12,829 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 746644ba-e80e-4ebd-b9ab-580b9fdef94e
+2026-06-11 15:40:13,623 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 2978789d-5b02-47e6-80a8-27043dc5477b
+2026-06-11 15:40:14,296 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 68e50ece-1a59-4e02-ba89-4e3f48545e8d
+2026-06-11 15:46:34,085 | INFO | src.modules.users.service | User created with email: thaynararm2@hotmail.com and uuid: 62cdaaf4-b3f9-4e6e-9427-b29c142d69de
+2026-06-11 16:40:39,978 | INFO | src.modules.users.service | User created with email: thaynararm2@hotmail.com and uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-11 16:41:42,002 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: eea57e28-8711-4a14-80a8-d67b57f42012 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-11 19:04:25,702 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 0811a494-a024-4f1c-8126-d0a2cd903b14 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 13:01:51,350 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 2763788e-5945-4829-9982-0d91a6b52084 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 14:47:30,122 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: c1e3a5d0-6144-4f76-ad6f-8edc4d886676 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 14:48:19,952 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 39da4edc-14ba-4e80-9ec8-27220ae435e9 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 14:49:52,019 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 92865ebf-d298-4949-9ce2-46bd4a878ff9 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 14:59:45,954 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 9330e94e-7ca0-484b-b9d6-b170b68fa15a for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 15:02:19,154 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 32718ff7-aec5-478c-9314-07d73d1aed17 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 15:15:01,298 | INFO | src.modules.cards.service | Card created with uuid: 0bf4ebe7-e427-43ae-99b4-ec8e9bf1eb55 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 15:17:21,771 | INFO | src.modules.cards.service | Card created with uuid: fe2d350c-e74d-4533-9521-b9fc55269227 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 15:25:01,144 | INFO | src.modules.cards.service | Card created with uuid: 25b01f15-510c-427c-940c-78b379faff80 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 15:25:29,424 | INFO | src.modules.cards.service | Card created with uuid: 82c1d950-a4a3-43df-b07f-8b57bce234b4 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 15:26:44,335 | INFO | src.modules.cards.service | Card created with uuid: 972b1573-63a4-4d1a-a9f4-4716aa179fb7 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 20:15:30,722 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 7cbdb780-861f-43be-83a4-6d1f57375667
+2026-06-12 20:16:44,860 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: bbc44a80-da31-4661-97df-061dc3aab00e
+2026-06-12 20:21:21,355 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: e0db60da-d8ec-4b90-ab1f-4830b2df31b6
+2026-06-12 20:21:24,954 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: e0db60da-d8ec-4b90-ab1f-4830b2df31b6
+2026-06-12 20:22:12,917 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 01644814-490b-45b9-98bf-40c68f39a94b
+2026-06-12 20:22:20,890 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 6ae87a15-3c6b-446e-9e40-b79df1ab77e2
+2026-06-12 20:22:29,050 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 6ae87a15-3c6b-446e-9e40-b79df1ab77e2
+2026-06-12 20:22:44,247 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: ceed4e4c-cb5d-48e7-bbd7-8aa1a4982375
+2026-06-12 20:22:53,091 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: ceed4e4c-cb5d-48e7-bbd7-8aa1a4982375
+2026-06-12 20:25:50,855 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: e0db60da-d8ec-4b90-ab1f-4830b2df31b6
+2026-06-12 20:25:51,506 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 6ae87a15-3c6b-446e-9e40-b79df1ab77e2
+2026-06-12 20:26:26,747 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 305bb6cb-64ff-4f77-a227-bf39c001a7b4 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 20:27:35,180 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 292a75f0-20a7-4b94-8ff6-39e6a3c69cd3 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 20:28:04,453 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: aa39f09e-ba10-4f01-aac6-cc7888a97c06 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 20:30:07,048 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 5f12e9a6-0aac-46cf-bc25-439d19ef8cd4 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 20:34:32,433 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: ed5713e6-16b4-4b1d-88ef-7578ecbdca59 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 20:37:02,405 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: aa17df5d-ea9a-492f-a4e1-669b5854551f for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 20:39:00,403 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 8a58671a-194b-4e58-8d5d-63b5aaeb71bd for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 21:44:15,093 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: d0a34d49-afee-4d59-b9f0-5cce0df289ab for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 21:44:38,149 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 78c671bb-906c-40a8-b852-9ddb7f816c41
+2026-06-12 21:45:35,926 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 8b6fb276-9a82-44b6-b2e3-02059567a610 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 21:48:16,977 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 2d0752f4-5fc7-45bb-8715-33ec1d4fe112 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 21:48:33,768 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 3ccde82a-a011-4a80-8e85-bfea86189941 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 21:48:55,420 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: ec2c3ec8-98c4-4094-a2fe-8ac16d0d3e43 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 21:49:23,730 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 3eda34b1-9805-4167-af7a-f9798e823c0d for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 21:49:38,820 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 0bb5864c-8238-4625-a2ce-1bc7ede57f17 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 21:50:10,255 | INFO | src.modules.financial_accounts.service | Financial account created with uuid: 4cc87818-e856-4f51-a6c8-4371753ed267 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-12 21:50:26,286 | INFO | src.modules.cards.service | Card created with uuid: bd361286-9d3f-4e89-8fe8-7f2def287de1 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
