@@ -639,7 +639,6 @@ def delete_account_transaction(
 
 def _get_or_create_transfer_category(
     db: Session,
-    id_user: int,
     transaction_type: TransactionTypeEnum,
 ) -> CategoryTransaction:
     normalized_target = normalize_text("transferencia entre contas")
@@ -647,7 +646,6 @@ def _get_or_create_transfer_category(
     user_categories = (
         db.query(CategoryTransaction)
         .filter(
-            CategoryTransaction.id_user == id_user,
             CategoryTransaction.type == transaction_type,
         )
         .all()
@@ -669,9 +667,8 @@ def _get_or_create_transfer_category(
             return category
 
     created_category = CategoryTransaction(
-        id_user=id_user,
-        name="Transferencia entre contas",
-        description="Categoria para registrar transferencias entre contas",
+        name="transferencia_entre_contas",
+        description="Transferência entre Contas",
         type=transaction_type,
     )
     db.add(created_category)
@@ -707,15 +704,9 @@ def _ensure_transfer_mirror_transactions(
     amount: float,
     description: str | None,
 ) -> tuple[AccountTransaction, AccountTransaction]:
-    income_category = _get_or_create_transfer_category(
+    category = _get_or_create_transfer_category(
         db,
-        current_user.id,
-        TransactionTypeEnum.income,
-    )
-    expense_category = _get_or_create_transfer_category(
-        db,
-        current_user.id,
-        TransactionTypeEnum.expense,
+        TransactionTypeEnum.transfer,
     )
 
     origin_transaction = None
@@ -752,7 +743,7 @@ def _ensure_transfer_mirror_transactions(
                 {
                     "id_user": current_user.id,
                     "id_financial_account": origin_account.id,
-                    "id_category_transaction": expense_category.id,
+                    "id_category_transaction": category.id,
                     "transaction_type": TransactionTypeEnum.expense,
                     "description": origin_description,
                     "purchase_date": transfer_date,
@@ -768,7 +759,7 @@ def _ensure_transfer_mirror_transactions(
                 {
                     "id_user": current_user.id,
                     "id_financial_account": destination_account.id,
-                    "id_category_transaction": income_category.id,
+                    "id_category_transaction": category.id,
                     "transaction_type": TransactionTypeEnum.income,
                     "description": destination_description,
                     "purchase_date": transfer_date,
@@ -923,6 +914,58 @@ def get_account_transfer_by_uuid(
     return repository.get_account_transfer_by_uuid(db, transfer_uuid)
 
 
+def delete_account_transfer(
+    db: Session,
+    db_transfer: AccountTransfer,
+) -> None:
+    origin_transaction_id = db_transfer.id_origin_transaction
+    destination_transaction_id = db_transfer.id_destination_transaction
+
+    origin_transaction = None
+    if origin_transaction_id is not None:
+        origin_transaction = repository.get_account_transaction_by_id(
+            db,
+            origin_transaction_id,
+        )
+
+    destination_transaction = None
+    if destination_transaction_id is not None:
+        destination_transaction = repository.get_account_transaction_by_id(
+            db,
+            destination_transaction_id,
+        )
+
+    try:
+        # Remove transfer first to avoid FK constraint issues while removing
+        # referenced mirror transactions in the same transaction.
+        repository.delete_account_transfer(
+            db,
+            db_transfer,
+            auto_commit=False,
+        )
+
+        if origin_transaction is not None:
+            repository.delete_account_transaction(
+                db,
+                origin_transaction,
+                auto_commit=False,
+            )
+
+        if destination_transaction is not None:
+            repository.delete_account_transaction(
+                db,
+                destination_transaction,
+                auto_commit=False,
+            )
+
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise
+
+    logger.info("Account transfer deleted with uuid: %s", db_transfer.uuid)
+
+
 def update_account_transfer(
     db: Session,
     db_transfer: AccountTransfer,
@@ -1036,7 +1079,7 @@ def list_user_movements_from_active_accounts(
     *,
     start_date: str | None = None,
     end_date: str | None = None,
-    transaction_type: Literal["income", "expense"] | None = None,
+    transaction_type: Literal["income", "expense", "transfer"] | None = None,
     description: str | None = None,
     category_uuids: list[UUID] | None = None,
     account_uuids: list[UUID] | None = None,
@@ -1068,7 +1111,7 @@ def get_user_financial_summary_from_active_accounts(
     *,
     start_date: str | None = None,
     end_date: str | None = None,
-    transaction_type: list[Literal["income", "expense"]] | None = None,
+    transaction_type: list[Literal["income", "expense", "transfer"]] | None = None,
     description: str | None = None,
     category_uuids: list[UUID] | None = None,
     account_uuids: list[UUID] | None = None,

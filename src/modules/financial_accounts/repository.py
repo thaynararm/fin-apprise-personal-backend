@@ -1,5 +1,5 @@
-from sqlalchemy.orm import Session, joinedload
-from sqlalchemy import String, and_, case, cast, or_, func
+from sqlalchemy.orm import Session, aliased, joinedload
+from sqlalchemy import String, and_, case, cast, or_, func, select
 from datetime import date
 from typing import Literal
 from uuid import UUID
@@ -13,6 +13,7 @@ from src.modules.financial_accounts.model import (
     AccountTransaction,
     AccountTransfer,
 )
+from src.models.shared.enums import TransactionTypeEnum
 
 # ------------------
 # Financial Account Model
@@ -192,6 +193,12 @@ def list_account_transactions(
             AccountTransaction.id_category_transaction == CategoryTransaction.id,
         )
         .filter(AccountTransaction.id_financial_account == id_financial_account)
+        .filter(
+            or_(
+                CategoryTransaction.name.is_(None),
+                CategoryTransaction.name != "transferencia_entre_contas",
+            )
+        )
     )
 
     if description is not None and description.strip():
@@ -326,9 +333,13 @@ def update_account_transaction(
 def delete_account_transaction(
     db: Session,
     db_transaction: AccountTransaction,
+    auto_commit: bool = True,
 ) -> None:
     db.delete(db_transaction)
-    db.commit()
+    if auto_commit:
+        db.commit()
+    else:
+        db.flush()
 
 
 # ------------------
@@ -397,13 +408,25 @@ def update_account_transfer(
     return db_transfer
 
 
+def delete_account_transfer(
+    db: Session,
+    db_transfer: AccountTransfer,
+    auto_commit: bool = True,
+) -> None:
+    db.delete(db_transfer)
+    if auto_commit:
+        db.commit()
+    else:
+        db.flush()
+
+
 def list_user_movements_from_active_accounts(
     db: Session,
     *,
     id_user: int,
     start_date: date | None = None,
     end_date: date | None = None,
-    transaction_type: list[Literal["income", "expense"]] | None = None,
+    transaction_type: list[Literal["income", "expense", "transfer"]] | None = None,
     description: str | None = None,
     category_uuids: list[UUID] | None = None,
     account_uuids: list[UUID] | None = None,
@@ -437,7 +460,6 @@ def list_user_movements_from_active_accounts(
             row[0]
             for row in db.query(CategoryTransaction.id)
             .filter(
-                CategoryTransaction.id_user == id_user,
                 CategoryTransaction.uuid.in_(category_uuids),
             )
             .all()
@@ -448,7 +470,23 @@ def list_user_movements_from_active_accounts(
 
     order_by_fields = order_by or ["purchase_date"]
 
-    transactions_query = (
+    # Subquery: IDs das transações que são a ORIGEM de uma transferência (ficam visíveis, mas
+    # terão transaction_type sobrescrito para "transfer" no pós-processamento)
+    transfer_origin_ids_sq = (
+        db.query(AccountTransfer.id_origin_transaction.label("transaction_id"))
+        .filter(AccountTransfer.id_origin_transaction.isnot(None))
+        .subquery()
+    )
+
+    # Subquery: IDs das transações que são o DESTINO de uma transferência (excluídas para evitar
+    # duplicidade — a origem já representa a movimentação completa)
+    transfer_destination_ids_sq = (
+        db.query(AccountTransfer.id_destination_transaction.label("transaction_id"))
+        .filter(AccountTransfer.id_destination_transaction.isnot(None))
+        .subquery()
+    )
+
+    query = (
         db.query(AccountTransaction)
         .filter(AccountTransaction.id_financial_account.in_(active_account_ids))
         .options(
@@ -464,47 +502,81 @@ def list_user_movements_from_active_accounts(
             CategoryTransaction,
             AccountTransaction.id_category_transaction == CategoryTransaction.id,
         )
+        .filter(
+            ~AccountTransaction.id.in_(
+                select(transfer_destination_ids_sq.c.transaction_id)
+            )
+        )
     )
 
     if start_date is not None:
-        transactions_query = transactions_query.filter(
-            AccountTransaction.purchase_date >= start_date
-        )
+        query = query.filter(AccountTransaction.purchase_date >= start_date)
 
     if end_date is not None:
-        transactions_query = transactions_query.filter(
-            AccountTransaction.purchase_date <= end_date
-        )
+        query = query.filter(AccountTransaction.purchase_date <= end_date)
 
     if transaction_type is not None:
-        transactions_query = transactions_query.filter(
-            AccountTransaction.transaction_type.in_(transaction_type)
-        )
+        # No banco, origens de transferência são salvas com transaction_type="expense".
+        # Remapeamento: "transfer" no filtro → origens de transferência (expense no banco);
+        # "expense" no filtro → expenses reais (excluindo origens de transferência).
+        include_transfers = "transfer" in transaction_type
+        real_types = [t for t in transaction_type if t != "transfer"]
+
+        conditions = []
+
+        if real_types:
+            if "expense" in real_types:
+                other_real = [t for t in real_types if t != "expense"]
+                if other_real:
+                    conditions.append(
+                        AccountTransaction.transaction_type.in_(other_real)
+                    )
+                # Expenses reais: exclui as que são origens de transferência
+                conditions.append(
+                    and_(
+                        AccountTransaction.transaction_type == "expense",
+                        ~AccountTransaction.id.in_(
+                            select(transfer_origin_ids_sq.c.transaction_id)
+                        ),
+                    )
+                )
+            else:
+                conditions.append(AccountTransaction.transaction_type.in_(real_types))
+
+        if include_transfers:
+            conditions.append(
+                AccountTransaction.id.in_(
+                    select(transfer_origin_ids_sq.c.transaction_id)
+                )
+            )
+
+        if conditions:
+            query = query.filter(
+                or_(*conditions) if len(conditions) > 1 else conditions[0]
+            )
 
     if normalized_description:
-        transactions_query = transactions_query.filter(
+        query = query.filter(
             func.unaccent(func.lower(AccountTransaction.description)).ilike(
                 f"%{normalized_description}%"
             )
         )
 
     if category_ids is not None:
-        transactions_query = transactions_query.filter(
+        query = query.filter(
             AccountTransaction.id_category_transaction.in_(category_ids)
         )
 
     if is_paid is not None:
-        transactions_query = transactions_query.filter(
-            AccountTransaction.is_paid == is_paid
-        )
+        query = query.filter(AccountTransaction.is_paid == is_paid)
 
     if normalized_value_text:
-        transactions_query = transactions_query.filter(
+        query = query.filter(
             cast(AccountTransaction.value, String).ilike(f"%{normalized_value_text}%")
         )
 
     if normalized_merchant_name:
-        transactions_query = transactions_query.join(
+        query = query.join(
             MerchantNames,
             AccountTransaction.id_merchant_name == MerchantNames.id,
         ).filter(
@@ -541,7 +613,42 @@ def list_user_movements_from_active_accounts(
     if not order_clauses:
         order_clauses.append(AccountTransaction.purchase_date.desc())
 
-    return transactions_query.order_by(*order_clauses).all()
+    results = query.order_by(*order_clauses).all()
+
+    # Pós-processamento: nas transações que são origem de transferência, sobrescreve
+    # transaction_type para "transfer", uuid para o uuid da transferência e adiciona
+    # uuid_destination_account com o uuid da conta destino.
+    # Seguro pois a sessão usa autoflush=False e não há commit após essa função,
+    # então os objetos não são persistidos com esses valores alterados.
+    if results:
+        result_ids = [t.id for t in results]
+        DestinationAccount = aliased(FinancialAccount)
+        transfer_by_origin_transaction_id = {
+            row[0]: (row[1], row[2])
+            for row in db.query(
+                AccountTransfer.id_origin_transaction,
+                AccountTransfer.uuid,
+                DestinationAccount.uuid,
+            )
+            .join(
+                DestinationAccount,
+                AccountTransfer.id_destination_account == DestinationAccount.id,
+            )
+            .filter(
+                AccountTransfer.id_origin_transaction.isnot(None),
+                AccountTransfer.id_origin_transaction.in_(result_ids),
+            )
+            .all()
+        }
+        for transaction in results:
+            transfer_info = transfer_by_origin_transaction_id.get(transaction.id)
+            if transfer_info is not None:
+                transfer_uuid, destination_account_uuid = transfer_info
+                transaction.transaction_type = TransactionTypeEnum.transfer
+                transaction.uuid = transfer_uuid
+                transaction.uuid_destination_account = destination_account_uuid
+
+    return results
 
 
 def get_user_financial_summary_from_active_accounts(
@@ -550,7 +657,7 @@ def get_user_financial_summary_from_active_accounts(
     id_user: int,
     start_date: date | None = None,
     end_date: date | None = None,
-    transaction_type: list[Literal["income", "expense"]] | None = None,
+    transaction_type: list[Literal["income", "expense", "transfer"]] | None = None,
     description: str | None = None,
     category_uuids: list[UUID] | None = None,
     account_uuids: list[UUID] | None = None,

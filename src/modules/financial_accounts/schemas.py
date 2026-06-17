@@ -126,6 +126,7 @@ class AccountTransactionResponse(BaseModel):
     recurrence_frequency: RecurrenceFrequencyLiteral | None
     recurrence_enabled: bool
     recurrence_group_id: UUID | None
+    uuid_destination_account: UUID | None = None
     created_at: datetime
     updated_at: datetime
 
@@ -146,6 +147,58 @@ class AccountTransactionResponse(BaseModel):
     @field_validator("merchant_name", mode="before")
     @classmethod
     def extract_merchant_name(cls, v):
+        if hasattr(v, "name"):
+            return v.name
+        return v
+
+    @field_validator("loan_recipient_name", mode="before")
+    @classmethod
+    def extract_loan_recipient_name(cls, v):
+        if hasattr(v, "name"):
+            return v.name
+        return v
+
+
+class AccountMovementResponse(BaseModel):
+    uuid: UUID
+    user_uuid: UUID = Field(validation_alias="user")
+    uuid_financial_account: UUID = Field(validation_alias="financial_account")
+    uuid_category_transaction: UUID = Field(validation_alias="category_transaction")
+    transaction_type: str
+    description: str
+    merchant_name: str | None = None
+    loan_recipient_name: str | None = None
+    purchase_date: date
+    payment_date: date
+    value: float
+    is_paid: bool
+    is_recurring: bool
+    recurrence_frequency: RecurrenceFrequencyLiteral | None
+    recurrence_enabled: bool
+    recurrence_group_id: UUID | None
+    uuid_account_destination: UUID | None = None
+    created_at: datetime
+    updated_at: datetime
+
+    model_config = ConfigDict(from_attributes=True, populate_by_name=True)
+
+    @field_validator(
+        "user_uuid",
+        "uuid_financial_account",
+        "uuid_category_transaction",
+        mode="before",
+    )
+    @classmethod
+    def extract_uuid(cls, v):
+        if hasattr(v, "uuid"):
+            return v.uuid
+        return v
+
+    @field_validator("merchant_name", mode="before")
+    @classmethod
+    def extract_merchant_description(cls, v):
+        if hasattr(v, "description"):
+            return v.description
         if hasattr(v, "name"):
             return v.name
         return v

@@ -22,7 +22,9 @@ router = APIRouter()
 def get_user_financial_summary_from_active_accounts(
     start_date: str | None = Query(default=None),
     end_date: str | None = Query(default=None),
-    transaction_type: list[Literal["income", "expense"]] | None = Query(default=None),
+    transaction_type: list[Literal["income", "expense", "transfer"]] | None = Query(
+        default=None
+    ),
     description: str | None = Query(default=None, min_length=1, max_length=255),
     category_uuids: list[UUID] | None = Query(default=None),
     account_uuids: list[UUID] | None = Query(default=None),
@@ -50,90 +52,6 @@ def get_user_financial_summary_from_active_accounts(
         "total": total,
         "filtered": filtered,
     }
-
-
-@router.get(
-    "/me/movements",
-    response_model=list[schemas.AccountTransactionResponse],
-)
-def list_user_movements_from_active_accounts(
-    start_date: str | None = Query(default=None),
-    end_date: str | None = Query(default=None),
-    transaction_type: list[Literal["income", "expense"]] | None = Query(default=None),
-    description: str | None = Query(default=None, min_length=1, max_length=255),
-    category_uuids: list[UUID] | None = Query(default=None),
-    account_uuids: list[UUID] | None = Query(default=None),
-    is_paid: bool | None = Query(default=None),
-    value_text: str | None = Query(default=None, min_length=1, max_length=32),
-    merchant_name: str | None = Query(default=None, min_length=1, max_length=255),
-    order_by: str | None = Query(default=None),
-    db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user),
-):
-    parsed_order_by: list[str] | None = None
-    if order_by is not None and order_by.strip():
-        allowed_order_fields = {
-            "purchase_date",
-            "category",
-            "description",
-            "account_name",
-            "value",
-        }
-        parsed_order_by = []
-        invalid_order_fields: list[str] = []
-
-        for raw_field in [
-            field.strip() for field in order_by.split(",") if field.strip()
-        ]:
-            if ":" in raw_field:
-                field_name, direction = raw_field.split(":", 1)
-                clean_field = field_name.strip()
-                clean_direction = direction.strip().lower()
-
-                if clean_field not in allowed_order_fields or clean_direction not in {
-                    "asc",
-                    "desc",
-                }:
-                    invalid_order_fields.append(raw_field)
-                    continue
-
-                parsed_order_by.append(
-                    clean_field if clean_direction == "asc" else f"-{clean_field}"
-                )
-                continue
-
-            clean_field = raw_field.lstrip("+-")
-            if clean_field not in allowed_order_fields:
-                invalid_order_fields.append(raw_field)
-                continue
-
-            parsed_order_by.append(raw_field)
-
-        if invalid_order_fields:
-            raise HTTPException(
-                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                detail=(
-                    "Invalid order_by fields: "
-                    + ", ".join(invalid_order_fields)
-                    + ". Use: purchase_date, category, description, account_name, value "
-                    "with +/-, or :asc/:desc (ex: purchase_date:desc)"
-                ),
-            )
-
-    return service.list_user_movements_from_active_accounts(
-        db,
-        current_user,
-        start_date=start_date,
-        end_date=end_date,
-        transaction_type=transaction_type,
-        description=description,
-        category_uuids=category_uuids,
-        account_uuids=account_uuids,
-        is_paid=is_paid,
-        value_text=value_text,
-        merchant_name=merchant_name,
-        order_by=parsed_order_by,
-    )
 
 
 @router.get("", response_model=list[schemas.FinancialAccountResponse])
@@ -216,6 +134,92 @@ def get_financial_account(
 # ------------------
 # Account Transactions Models
 # ------------------
+
+
+@router.get(
+    "/me/movements",
+    response_model=list[schemas.AccountMovementResponse],
+)
+def list_user_movements_from_active_accounts(
+    start_date: str | None = Query(default=None),
+    end_date: str | None = Query(default=None),
+    transaction_type: list[Literal["income", "expense", "transfer"]] | None = Query(
+        default=None
+    ),
+    description: str | None = Query(default=None, min_length=1, max_length=255),
+    category_uuids: list[UUID] | None = Query(default=None),
+    account_uuids: list[UUID] | None = Query(default=None),
+    is_paid: bool | None = Query(default=None),
+    value_text: str | None = Query(default=None, min_length=1, max_length=32),
+    merchant_name: str | None = Query(default=None, min_length=1, max_length=255),
+    order_by: str | None = Query(default=None),
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    parsed_order_by: list[str] | None = None
+    if order_by is not None and order_by.strip():
+        allowed_order_fields = {
+            "purchase_date",
+            "category",
+            "description",
+            "account_name",
+            "value",
+        }
+        parsed_order_by = []
+        invalid_order_fields: list[str] = []
+
+        for raw_field in [
+            field.strip() for field in order_by.split(",") if field.strip()
+        ]:
+            if ":" in raw_field:
+                field_name, direction = raw_field.split(":", 1)
+                clean_field = field_name.strip()
+                clean_direction = direction.strip().lower()
+
+                if clean_field not in allowed_order_fields or clean_direction not in {
+                    "asc",
+                    "desc",
+                }:
+                    invalid_order_fields.append(raw_field)
+                    continue
+
+                parsed_order_by.append(
+                    clean_field if clean_direction == "asc" else f"-{clean_field}"
+                )
+                continue
+
+            clean_field = raw_field.lstrip("+-")
+            if clean_field not in allowed_order_fields:
+                invalid_order_fields.append(raw_field)
+                continue
+
+            parsed_order_by.append(raw_field)
+
+        if invalid_order_fields:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail=(
+                    "Invalid order_by fields: "
+                    + ", ".join(invalid_order_fields)
+                    + ". Use: purchase_date, category, description, account_name, value "
+                    "with +/-, or :asc/:desc (ex: purchase_date:desc)"
+                ),
+            )
+
+    return service.list_user_movements_from_active_accounts(
+        db,
+        current_user,
+        start_date=start_date,
+        end_date=end_date,
+        transaction_type=transaction_type,
+        description=description,
+        category_uuids=category_uuids,
+        account_uuids=account_uuids,
+        is_paid=is_paid,
+        value_text=value_text,
+        merchant_name=merchant_name,
+        order_by=parsed_order_by,
+    )
 
 
 @router.get(
@@ -475,7 +479,7 @@ def create_account_transfer(
     return service.create_account_transfer(db, payload, current_user)
 
 
-@router.patch(
+@router.put(
     "/transfers/{transfer_uuid}",
     response_model=schemas.AccountTransferResponse,
 )
@@ -499,3 +503,28 @@ def update_account_transfer(
         )
 
     return service.update_account_transfer(db, db_transfer, payload, current_user)
+
+
+@router.delete(
+    "/transfers/{transfer_uuid}",
+    status_code=status.HTTP_204_NO_CONTENT,
+)
+def delete_account_transfer(
+    transfer_uuid: UUID,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    db_transfer = service.get_account_transfer_by_uuid(db, transfer_uuid)
+    if not db_transfer:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Transfer not found",
+        )
+
+    if db_transfer.id_user != current_user.id:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="You can only delete your own transfer",
+        )
+
+    service.delete_account_transfer(db, db_transfer)
