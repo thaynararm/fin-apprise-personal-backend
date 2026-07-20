@@ -407,7 +407,7 @@ def create_card_transaction(
     if not category:
         raise ValidationDomainError("Category transaction not found")
 
-    if category.id_user != current_user.id:
+    if category.id_user and category.id_user != current_user.id:
         raise ValidationDomainError("You can only use your own category transaction")
 
     normalized_description = payload.description.strip()
@@ -429,7 +429,12 @@ def create_card_transaction(
 
     id_loan_recipient = None
     if payload.loan_recipient_name is not None:
-        if normalize_text(category.name) != "emprestimo":
+        if normalize_text(category.name) not in (
+            "emprestimo",
+            "emprestimos",
+            "credito",
+            "amortizacao",
+        ):
             raise ValidationDomainError(
                 "loan_recipient_name só pode ser informado quando a categoria for 'Empréstimo'"
             )
@@ -709,7 +714,7 @@ def update_card_transaction(
         if not category:
             raise ValidationDomainError("Category transaction not found")
 
-        if category.id_user != current_user.id:
+        if category.id_user is not None and category.id_user != current_user.id:
             raise ValidationDomainError(
                 "You can only use your own category transaction"
             )
@@ -760,9 +765,11 @@ def update_card_transaction(
                     .first()
                 )
 
-            if (
-                resolved_category
-                and normalize_text(resolved_category.name) != "emprestimo"
+            if resolved_category and normalize_text(resolved_category.name) not in (
+                "emprestimo",
+                "emprestimos",
+                "credito",
+                "amortizacao",
             ):
                 raise ValidationDomainError(
                     "loan_recipient_name só pode ser informado quando a categoria for 'Empréstimo'"

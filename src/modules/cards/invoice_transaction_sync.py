@@ -48,11 +48,8 @@ def _get_or_create_invoice_category(db: Session, id_user: int) -> CategoryTransa
     category = (
         db.query(CategoryTransaction)
         .filter(
-            CategoryTransaction.id_user == id_user,
-            or_(
-                CategoryTransaction.name.ilike("%fatura%"),
-                CategoryTransaction.name.ilike("%cartao%"),
-            ),
+            CategoryTransaction.name.ilike("%fatura%"),
+            CategoryTransaction.name.ilike("%cartao%"),
         )
         .order_by(CategoryTransaction.id.asc())
         .first()

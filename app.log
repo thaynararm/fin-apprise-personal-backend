@@ -318,3 +318,49 @@
 2026-06-16 23:14:14,448 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 94d6a859-ceb8-457c-89ee-6ff80426e96c
 2026-06-17 14:50:49,305 | INFO | src.modules.financial_accounts.service | Account transfer created with uuid: 4887cab2-f600-497d-a21d-c672ac9f6673
 2026-06-17 14:51:29,348 | INFO | src.modules.financial_accounts.service | Account transfer deleted with uuid: 4887cab2-f600-497d-a21d-c672ac9f6673
+2026-06-17 16:00:25,932 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 1457429e-ce4e-4ac8-9b75-04ff67764feb
+2026-06-17 16:05:39,087 | INFO | src.modules.financial_accounts.service | Account transaction deleted with uuid: 1457429e-ce4e-4ac8-9b75-04ff67764feb
+2026-06-17 21:36:31,439 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 130 for invoice 29
+2026-06-17 21:36:32,867 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 131 for invoice 30
+2026-06-17 21:36:34,326 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 132 for invoice 31
+2026-06-17 22:22:33,867 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 94d6a859-ceb8-457c-89ee-6ff80426e96c
+2026-06-17 22:26:21,768 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 94d6a859-ceb8-457c-89ee-6ff80426e96c
+2026-06-17 22:26:38,743 | INFO | src.modules.financial_accounts.service | Account transaction updated with uuid: 4b6c3ecf-f173-45b6-8db3-12b6e898fd23
+2026-06-17 22:34:59,997 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 133 for invoice 34
+2026-06-17 22:35:00,009 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 134 for invoice 10
+2026-06-17 22:35:00,049 | INFO | src.modules.cards.service | Card transaction updated with uuid: 1c02a763-e5fa-447f-991d-027f62da2a18
+2026-06-17 22:35:13,535 | INFO | src.modules.cards.service | Deleting card transaction with uuid: 1c02a763-e5fa-447f-991d-027f62da2a18
+2026-06-18 15:14:33,880 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 135 for invoice 35
+2026-06-18 15:14:33,889 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 136 for invoice 36
+2026-06-18 15:14:33,896 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 137 for invoice 37
+2026-06-18 15:14:33,902 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 138 for invoice 38
+2026-06-18 15:14:33,910 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 139 for invoice 39
+2026-06-18 15:14:33,917 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 140 for invoice 40
+2026-06-18 15:14:33,925 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 141 for invoice 41
+2026-06-18 15:23:59,816 | INFO | src.modules.cards.service | Card transaction updated with uuid: 6122d3f0-1395-4c31-8907-8888ef86758b
+2026-06-18 15:52:05,396 | INFO | src.modules.cards.service | Card transaction updated with uuid: 0c745e0d-fdc0-4d94-ab6a-c00e0dcf8c40
+2026-06-18 15:53:32,898 | INFO | src.modules.cards.service | Card transaction updated with uuid: 0c745e0d-fdc0-4d94-ab6a-c00e0dcf8c40
+2026-06-18 15:57:50,379 | INFO | src.modules.cards.service | Card transaction updated with uuid: 0c745e0d-fdc0-4d94-ab6a-c00e0dcf8c40
+2026-06-18 15:58:55,946 | INFO | src.modules.cards.service | Card transaction updated with uuid: 587e4a50-d7f4-4323-a9d3-fc6d5ccf35bc
+2026-06-18 15:59:02,164 | INFO | src.modules.cards.service | Card transaction updated with uuid: 377f1e33-a1ca-4364-bf0e-48c2b9ddee73
+2026-06-18 16:11:31,515 | INFO | src.modules.cards.service | Card transaction updated with uuid: 7a53071d-25b0-41a5-af65-39fd22be0edb
+2026-06-18 17:27:29,940 | INFO | src.modules.cards.service | Card created with uuid: 7fe20279-d893-4397-a3ae-3ff192034268 for user uuid: feddb71c-58aa-4fff-8d7d-1dc8c2c17d8b
+2026-06-18 17:28:16,608 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 142 for invoice 43
+2026-06-18 17:29:55,968 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 143 for invoice 44
+2026-06-18 17:29:55,974 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 144 for invoice 45
+2026-06-18 17:29:55,982 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 145 for invoice 46
+2026-06-18 17:29:55,990 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 146 for invoice 47
+2026-06-18 17:29:55,997 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 147 for invoice 48
+2026-06-18 17:29:56,004 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 148 for invoice 49
+2026-06-18 17:30:43,584 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 149 for invoice 50
+2026-06-18 17:30:43,592 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 150 for invoice 51
+2026-06-18 17:30:43,599 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 151 for invoice 52
+2026-06-18 17:30:43,607 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 152 for invoice 53
+2026-06-18 17:30:43,616 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 153 for invoice 54
+2026-06-18 17:30:43,624 | INFO | src.modules.cards.service | Card transaction updated with uuid: fa6fe906-2f53-40ec-954f-e6c4f8f96a97
+2026-06-18 17:31:22,373 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 154 for invoice 42
+2026-06-18 17:31:22,405 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 155 for invoice 55
+2026-06-18 17:31:22,413 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 156 for invoice 56
+2026-06-18 17:31:22,422 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 157 for invoice 57
+2026-06-18 17:33:14,534 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 158 for invoice 58
+2026-06-18 17:33:14,540 | INFO | src.modules.cards.invoice_transaction_sync | Created account transaction 159 for invoice 59

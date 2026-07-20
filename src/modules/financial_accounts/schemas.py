@@ -117,7 +117,9 @@ class AccountTransactionResponse(BaseModel):
     transaction_type: str
     description: str
     merchant_name: str | None = None
-    loan_recipient_name: str | None = None
+    loan_recipient_name: str | None = Field(
+        default=None, validation_alias="loan_recipient"
+    )
     purchase_date: date
     payment_date: date
     value: float
@@ -154,6 +156,8 @@ class AccountTransactionResponse(BaseModel):
     @field_validator("loan_recipient_name", mode="before")
     @classmethod
     def extract_loan_recipient_name(cls, v):
+        if hasattr(v, "description") and v.description:
+            return v.description
         if hasattr(v, "name"):
             return v.name
         return v
@@ -167,7 +171,9 @@ class AccountMovementResponse(BaseModel):
     transaction_type: str
     description: str
     merchant_name: str | None = None
-    loan_recipient_name: str | None = None
+    loan_recipient_name: str | None = Field(
+        default=None, validation_alias="loan_recipient"
+    )
     purchase_date: date
     payment_date: date
     value: float
@@ -206,6 +212,8 @@ class AccountMovementResponse(BaseModel):
     @field_validator("loan_recipient_name", mode="before")
     @classmethod
     def extract_loan_recipient_name(cls, v):
+        if hasattr(v, "description") and v.description:
+            return v.description
         if hasattr(v, "name"):
             return v.name
         return v
